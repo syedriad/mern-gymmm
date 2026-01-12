@@ -1,5 +1,5 @@
 require("dotenv").config();
-
+const cors = require("cors");
 console.log("js is running");
 
 const express = require("express");
@@ -12,6 +12,7 @@ const app = express();
 
 //middleware
 app.use(express.json());
+app.use(cors());
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
