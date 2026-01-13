@@ -5,7 +5,7 @@ const WorkoutDetails = ({hardwork}) =>{
     const {dispatch} = useContextWorkout()
 
     const handleDlt = async ()=>{
-        const response = await fetch(`api/workouts/${hardwork._id}`,{
+        const response = await fetch(`https://mern-gymmm-appi.vercel.app/api/workouts/${hardwork._id}`,{
             method: 'DELETE'
         } )
 
