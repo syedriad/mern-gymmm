@@ -11,7 +11,7 @@ const Home = () => {
 
   useEffect(()=>{
     const fetchWorkout = async () => {
-      const response = await fetch('/api/workouts')
+      const response = await fetch('https://mern-gymmm-appi.vercel.app/api/workouts')
 
       const jason = await response.json()
       console.log("Fetched workouts:", jason);
